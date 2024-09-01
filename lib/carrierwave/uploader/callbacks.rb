@@ -6,8 +6,8 @@ module CarrierWave
       included do
         class_attribute :_before_callbacks, :_after_callbacks,
                         :instance_writer => false
-        self._before_callbacks = Hash.new []
-        self._after_callbacks = Hash.new []
+        self._before_callbacks = Hash.new [] # rubocop:disable Style/EmptyLiteral
+        self._after_callbacks = Hash.new [] # rubocop:disable Style/EmptyLiteral
       end
 
       def with_callbacks(kind, *args)
